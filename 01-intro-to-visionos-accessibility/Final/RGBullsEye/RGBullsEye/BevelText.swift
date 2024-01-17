@@ -1,4 +1,4 @@
-/// Copyright (c) 2021 Razeware LLC
+/// Copyright (c) 2024 Kodeco LLC
 /// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -54,14 +54,12 @@ struct BevelText: View {
   }
 }
 
-struct BevelText_Previews: PreviewProvider {
-  static var previews: some View {
-    ZStack {
-      Color.element
-      BevelText(
-        text: "R: ??? G: ??? B: ???", width: 200, height: 48)
-    }
-    .frame(width: 300, height: 100)
-    .previewLayout(.sizeThatFits)
+#Preview {
+  ZStack {
+    Color.element
+    BevelText(
+      text: "R: ??? G: ??? B: ???", width: 200, height: 48)
   }
+  .frame(width: 300, height: 100)
+  .previewLayout(.sizeThatFits)
 }

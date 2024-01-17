@@ -1,4 +1,4 @@
-/// Copyright (c) 2021 Razeware LLC
+/// Copyright (c) 2024 Kodeco LLC
 /// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -93,13 +93,10 @@ struct ColorText: View {
   }
 }
 
-struct SuccessView_Previews: PreviewProvider {
-  static var previews: some View {
-    SuccessView(
-      game: .constant(Game()),
-      score: 95,
-      target: RGB(),
-      guess: .constant(RGB()))
-      
-  }
+#Preview {
+  SuccessView(
+    game: .constant(Game()),
+    score: 95,
+    target: RGB(),
+    guess: .constant(RGB()))
 }

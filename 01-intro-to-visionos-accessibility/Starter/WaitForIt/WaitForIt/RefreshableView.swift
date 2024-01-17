@@ -1,4 +1,4 @@
-/// Copyright (c) 2021 Razeware LLC
+/// Copyright (c) 2024 Kodeco LLC
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -36,42 +36,25 @@ struct RefreshableView: View {
   @StateObject var jokeService = JokeService()
 
   var body: some View {
-   ZStack {
-      List {
-        Text("Chuck Norris Joke")
-          .font(.largeTitle)
-          .listRowSeparator(.hidden)
-        Text(jokeService.joke)
-          .multilineTextAlignment(.center)
-          .lineLimit(nil)
-          .lineSpacing(5.0)
-          .padding()
-          .font(.title)
-      }
-      .task {
-        try? await jokeService.fetchJoke()
-      }
-      .refreshable {
-        try? await jokeService.fetchJoke()
-      }
-      Button(action: {
-        Task {
-          try? await jokeService.fetchJoke()
-        }
-      }) {
-        Text("Fetch a joke")
-          .padding(.bottom)
-          .opacity(jokeService.isFetching ? 0 : 1)
-          .overlay {
-            if jokeService.isFetching { ProgressView() }
-          }
-      }
+    List {
+      Text(jokeService.joke)
+        .lineLimit(nil)
+        .lineSpacing(5.0)
+        .padding()
+        .font(.title)
+      Text("Pull to refresh")
+        .font(.title2)
+        .listRowSeparator(.hidden)
+    }
+    .task {
+      try? await jokeService.fetchJoke()
+    }
+    .refreshable {
+      try? await jokeService.fetchJoke()
     }
   }
 }
 
-struct RefreshableView_Previews: PreviewProvider {
-    static var previews: some View {
-        RefreshableView()
-    }
+#Preview {
+  RefreshableView()
 }

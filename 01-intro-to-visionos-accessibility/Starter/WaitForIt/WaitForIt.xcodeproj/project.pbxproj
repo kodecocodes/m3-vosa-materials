@@ -13,6 +13,7 @@
 		CD6AC9CC26745C2000E65B37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD6AC9CB26745C2000E65B37 /* Preview Assets.xcassets */; };
 		CD6AC9D32674764E00E65B37 /* JokeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6AC9D22674764E00E65B37 /* JokeService.swift */; };
 		CD6AC9D52676EFA500E65B37 /* RefreshableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6AC9D42676EFA500E65B37 /* RefreshableView.swift */; };
+		CDAA055F2B569A50003BFE0B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDAA055E2B569A50003BFE0B /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		CD6AC9CB26745C2000E65B37 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD6AC9D22674764E00E65B37 /* JokeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeService.swift; sourceTree = "<group>"; };
 		CD6AC9D42676EFA500E65B37 /* RefreshableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableView.swift; sourceTree = "<group>"; };
+		CDAA055E2B569A50003BFE0B /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				CD6AC9D42676EFA500E65B37 /* RefreshableView.swift */,
 				CD6AC9D22674764E00E65B37 /* JokeService.swift */,
 				CD6AC9C826745C2000E65B37 /* Assets.xcassets */,
+				CDAA055E2B569A50003BFE0B /* Launch Screen.storyboard */,
 				CD6AC9CA26745C2000E65B37 /* Preview Content */,
 			);
 			path = WaitForIt;
@@ -131,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDAA055F2B569A50003BFE0B /* Launch Screen.storyboard in Resources */,
 				CD6AC9CC26745C2000E65B37 /* Preview Assets.xcassets in Resources */,
 				CD6AC9C926745C2000E65B37 /* Assets.xcassets in Resources */,
 			);

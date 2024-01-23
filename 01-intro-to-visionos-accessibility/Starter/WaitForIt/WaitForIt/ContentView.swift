@@ -38,6 +38,7 @@ struct ContentView: View {
   var body: some View {
     ZStack {
       Text(jokeService.joke)
+        .font(.title)
         .multilineTextAlignment(.center)
         .padding(.horizontal)
       VStack {

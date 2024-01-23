@@ -36,8 +36,8 @@ import SwiftUI
 struct WaitForItApp: App {
   var body: some Scene {
     WindowGroup {
-      RefreshableView()
-//       ContentView()
+//      RefreshableView()
+       ContentView()
     }
   }
 }

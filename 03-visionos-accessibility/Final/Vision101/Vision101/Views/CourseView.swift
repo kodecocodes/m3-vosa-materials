@@ -41,6 +41,7 @@ struct CourseView: View {
       Text(course.name)
         .font(.largeTitle)
       Text(course.content)
+        .font(.title)
       Spacer()
     }
     .padding(20)

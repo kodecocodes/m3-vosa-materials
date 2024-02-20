@@ -43,6 +43,7 @@ struct CourseView: View {
       Text(course.content)
       Spacer()
     }
+    .foregroundColor(.accentColor)
     .padding(20)
     .navigationTitle(course.name)
   }

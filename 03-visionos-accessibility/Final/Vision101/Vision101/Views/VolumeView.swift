@@ -44,10 +44,20 @@ struct VolumeView: View {
       Button("Start") {
         runAnimation.toggle()
       }
+      .tint(.primary)
+      .foregroundColor(.accentColor)
       //  12
       RealityView { content in
         // Add the initial RealityKit content
         if let scene = try? await Entity(named: "Scene", in: realityKitContentBundle) {
+          var accessibilityComponent = AccessibilityComponent()
+          accessibilityComponent.label = "Plane"
+          accessibilityComponent.value = "Flying"
+          accessibilityComponent.isAccessibilityElement = true
+          accessibilityComponent.traits = [.button, .playsSound]
+          accessibilityComponent.systemActions = [.activate]
+          scene.components[AccessibilityComponent.self] = accessibilityComponent
+
           content.add(scene)
           // 14
         }
@@ -57,6 +67,7 @@ struct VolumeView: View {
             if runAnimation {
               scene.playAnimation(animation.repeat(), transitionDuration: 3, startsPaused: false)
             } else {
+              AccessibilityNotification.Announcement("Plane stopped flying").post()
               scene.stopAllAnimations()
             }
           }

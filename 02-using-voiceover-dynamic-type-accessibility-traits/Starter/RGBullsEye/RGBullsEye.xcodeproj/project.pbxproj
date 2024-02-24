@@ -130,6 +130,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
+				ORGANIZATIONNAME = Kodeco;
 				TargetAttributes = {
 					CD405EF62536AA700062B1CC = {
 						CreatedOnToolsVersion = 12.2;

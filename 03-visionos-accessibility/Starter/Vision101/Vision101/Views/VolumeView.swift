@@ -44,8 +44,6 @@ struct VolumeView: View {
       Button("Start") {
         runAnimation.toggle()
       }
-//      .foregroundColor(.accentColor)
-//      .tint(.primary)
       //  12
       RealityView { content in
         // Add the initial RealityKit content

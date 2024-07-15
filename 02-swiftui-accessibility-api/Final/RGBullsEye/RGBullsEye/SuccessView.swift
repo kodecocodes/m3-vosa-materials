@@ -56,9 +56,11 @@ struct SuccessView: View {
           ColorText(
             text: "Target: " + target.intString,
             bkgd: Color(rgbStruct: target))
+          .accessibilityLabel("Target: " + target.accString)
           ColorText(
             text: "Guess: " + guess.intString,
             bkgd: Color(rgbStruct: guess))
+          .accessibilityLabel("Your guess: " + guess.accString)
         }
         .font(.title3)
         .foregroundColor(Color("grayText"))
